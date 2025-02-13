@@ -21,28 +21,28 @@ use_wayback_machine = False
 web_sections = [
     ('World', 'world'),
     ('U.S.', 'us'),
-    ('Politics', 'politics'),
+    #('Politics', 'politics'),
     ('New York', 'nyregion'),
-    ('Business', 'business'),
+    #('Business', 'business'),
     ('Technology', 'technology'),
-    ('Sports', 'sports'),
+    #('Sports', 'sports'),
     ('Science', 'science'),
-    ('Health', 'health'),
-    ('Opinion', 'opinion'),
+    #('Health', 'health'),
+    #('Opinion', 'opinion'),
     ('Arts', 'arts'),
     # ('Books', 'books'),
-    ('Movies', 'movies'),
-    ('Music', 'arts/music'),
-    ('Television', 'arts/television'),
-    ('Style', 'style'),
-    ('Dining & Wine', 'dining'),
+    #('Movies', 'movies'),
+    #('Music', 'arts/music'),
+    #('Television', 'arts/television'),
+    #('Style', 'style'),
+    #('Dining & Wine', 'dining'),
     ('Fashion & Style', 'fashion'),
-    ('Home & Garden', 'garden'),
+    #('Home & Garden', 'garden'),
     ('Travel', 'travel'),
     ('Education', 'education'),
-    ('Multimedia', 'multimedia'),
-    ('Obituaries', 'obituaries'),
-    ('Sunday Magazine', 'magazine')
+    #('Multimedia', 'multimedia'),
+    #('Obituaries', 'obituaries'),
+    #('Sunday Magazine', 'magazine')
 ]
 url_date_pat = re.compile(r'/(2\d\d\d)/(\d\d)/(\d\d)/')
 
@@ -159,6 +159,7 @@ class NewYorkTimes(BasicNewsRecipe):
         c = self.recipe_specific_options.get('comp')
         d = self.recipe_specific_options.get('days')
         w = self.recipe_specific_options.get('web')
+        self.compress_news_images = True
         if w and isinstance(w, str):
             if w == 'yes':
                 self.is_web_edition = False
