@@ -1,2 +1,2 @@
-nytimes
-slate
+The New York Times (Web)
+Slate
