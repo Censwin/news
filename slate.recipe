@@ -28,6 +28,7 @@ class Slate(BasicNewsRecipe):
     resolve_internal_links = True
     remove_empty_feeds = True
     ignore_duplicate_articles = {'url'}
+    compress_news_images = True
 
     extra_css = '''
         .article__rubric { font-size:small; color:#404040; }
@@ -57,7 +58,7 @@ class Slate(BasicNewsRecipe):
                 ('News & Politics', 'news-and-politics'),
                 ('Culture', 'culture'),
                 ('Technology', 'technology'),
-                ('Business', 'business'),
+                #('Business', 'business'),
                 ('Life', 'life'),
                 ('Advice', 'advice'),
         ):
